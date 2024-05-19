@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="build/app.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="grid-container" id="grid-container">
+      <!-- Random characters will be placed here -->
+    </div>
+    <div
+      class="fixed sm:hidden top-2 right-3 z-[111] rounded-full bg-gray-400 px-3 py-2"
+      onclick="toggleMenu()"
+    >
+      <i class="fas fa-list text-white"></i>
+    </div>
+    <div
+      id="menu"
+      class="transition-all fixed w-32 top-0 left-[-128px] sm:left-0 bottom-0 z-[55]"
+    >
+      <nav
+        class="left-0 top-0 flex flex-col h-full justify-between items-center p-4 bg-gray-800 text-white"
+      >
+        <div class="logo flex-none w-20 text-8xl">
+          <!-- R -->
+          <img src="./assets/img/eagle1.png" title="eagle icon" />
+        </div>
+        <div class="menu flex-1 mb-32">
+          <div class="flex flex-col h-full justify-center space-y-4">
+            <div>
+              <i class="fa-solid fa-house"></i>
+              <a href="#home" class="hover:text-gray-300">Home</a>
+            </div>
+            <div>
+              <i class="fas fa-user"></i>
+              <a href="#about" class="hover:text-gray-300">About</a>
+            </div>
+            <div>
+              <i class="fas fa-book-atlas"></i>
+              <a href="#resume" class="hover:text-gray-300">Resume</a>
+            </div>
+            <div>
+              <i class="fas fa-screwdriver-wrench"></i>
+              <a href="#skills" class="hover:text-gray-300">Skills</a>
+            </div>
+            <div>
+              <i class="fas fa-phone-square"></i>
+              <a href="#contact" class="hover:text-gray-300">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div></div>
+    <div class="sm:pl-32">
+      <!-- Home block -->
+      <div
+        id="home"
+        class="pl-0 h-screen relative mx-auto w-full overflow-hidden"
+      >
+        <div
+          class="flex flex-col z-50 sm:w-1/2 w-full absolute sm:justify-center content-center sm:h-1/2 h-1/6 space-y-2 min-[300px]:h-[95%] min-[300px]:justify-end"
+        >
+          <h1
+            class="bg-inherit text-3xl md:text-5xl sm:pl-6 md:bg-[#f0f0f0] text-center sm:text-left"
+          >
+            Hi <span class="text-3xl hand-wave">👋</span>, I am Roham;
+          </h1>
+          <h5
+            class="bg-inherit pt-2 sm:pl-6 text-lg md:bg-[#f0f0f0] text-center sm:text-left"
+          >
+            I am a Full Stack Developer;
+          </h5>
+        </div>
+        <div
+          class="absolute w-full h-full overflow-hidden mountains top-0 left-0 pl-0 sm:pl-32"
+        >
+          <div class="sun"></div>
+
+          <div class="mountain mountain1 z-30"></div>
+          <div class="mountain mountain2 z-20"></div>
+          <div class="mountain mountain3 z-20"></div>
+        </div>
+        <div class="flex h-full relative">
+          <div
+            class="absolute md:w-1/3 w-full h-full sm:left-1/2 lg:left-2/3 left-0 justify-end content-end z-10"
+          >
+            <img
+              class="min-w-[580px] sm:min-w-[650px] lg:min-w-[700px]"
+              title="Roham"
+              src="./assets/img/roham5.png"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col justify-center items-start h-full">
+          <h1 class="text-6xl font-bold">Hero Text</h1>
+          <p class="text-xl mt-2">Short description here.</p>
+          <hr class="border-t border-gray-500 my-2 w-full" />
+          <div class="social-icons flex gap-2">
+            <!-- Add social media icons here -->
+          </div>
+        </div>
+        <img
+          src="portrait.jpg"
+          alt="Portrait"
+          class="absolute bottom-0 mb-4"
+          style="left: 50%; transform: translateX(-50%)"
+        />
+      </div>
+
+      <!-- About section -->
+      <div
+        id="about"
+        class="pl-0 min-h-screen relative mx-auto w-full overflow-hidden"
+      >
+        <div id="summary" class="relative m-4 sm:mx-20 sm:my-8 space-y-8">
+          <div
+            id="about-title"
+            class="section-title relative text-4xl pb-3 text-blue-950"
+          >
+            About
+          </div>
+          <div id="about-content" class="flex flex-col text-lg space-y-2">
+            <p>Welcome to my website.</p>
+            <p class="font-['Open_Sans']">
+              I am a Full Stack Developer with 10 years of experience in web
+              development, specializing in PHP, Laravel, JavaScript, TypeScript,
+              Docker, CI/CD tools, and cloud technologies like AWS. My expertise
+              extends to databases with MySQL, PostgreSQL, Redis, and RDS, as
+              well as developing complex JavaScript applications. I have
+              co-founded projects and led development teams, mentored and
+              evaluated junior developers, and continuously expanded my
+              technical skills. I am open to remote opportunities and willing to
+              relocate for the right position.
+            </p>
+          </div>
+          <div>
+            <div
+              id="about-information"
+              class="flex lg:flex-row flex-col py-6 lg:space-x-4"
+            >
+              <div
+                id="about-picture"
+                class="flex-none w-72 h-56 overflow-hidden bg-gray-300"
+              >
+                <img
+                  class="-scale-x-100"
+                  src="./assets/img/roham4.png"
+                  title="about section portrait image"
+                />
+              </div>
+              <div
+                id="about-info-detaile"
+                class="grow lg:space-y-6 lg:space-x-6 pt-6 lg:pt-0"
+              >
+                <div class="flex xl:flex-row flex-col">
+                  <div
+                    class="basis-1/2 md:basis-1/2 lg:basis-1/3 2xl:basis-1/4 flex flex-col space-y-6"
+                  >
+                    <div class="flex flex-row space-x-3">
+                      <div class="content-end">
+                        <i
+                          class="fa-solid fa-chevron-right font-thin text-blue-950"
+                        ></i>
+                      </div>
+                      <div>
+                        <div class="flex flex-row space-x-2">
+                          <div class="font-medium">E-Mail:</div>
+                          <div class="">
+                            <a href="mail:rohamrowk1@gmail.com"
+                              >rohamwork1@gmail.com</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-row space-x-3">
+                      <div class="content-end">
+                        <i
+                          class="fa-solid fa-chevron-right font-thin text-blue-950"
+                        ></i>
+                      </div>
+                      <div>
+                        <div class="flex flex-row space-x-2">
+                          <div class="font-medium">Phone:</div>
+                          <div class="">
+                            <a href="tel:+989388391302">(+98) 938 839 1302</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-row space-x-3">
+                      <div class="content-end">
+                        <i
+                          class="fa-solid fa-chevron-right font-thin text-blue-950"
+                        ></i>
+                      </div>
+                      <div>
+                        <div class="flex flex-row space-x-2">
+                          <div class="font-medium">Address:</div>
+                          <div class="">Mashhad, Iran</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-row space-x-3">
+                      <div class="content-end">
+                        <i
+                          class="fa-solid fa-chevron-right font-thin text-blue-950"
+                        ></i>
+                      </div>
+                      <div>
+                        <div class="flex flex-row space-x-2">
+                          <div class="font-medium">LinkedIn:</div>
+                          <div class="">
+                            <a href="https://www.linkedin.com/in/roham0010"
+                              >Roham0010</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-row space-x-3">
+                      <div class="content-end">
+                        <i
+                          class="fa-solid fa-chevron-right font-thin text-blue-950"
+                        ></i>
+                      </div>
+                      <div>
+                        <div class="flex flex-row space-x-2">
+                          <div class="font-medium">Age:</div>
+                          <div class="">32</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="basis-1/2 md:basis-1/3 lg:basis-1/3 2xl:basis-1/4 flex flex-col space-y-6 pt-6 xl:pt-0"
+                  >
+                    <div class="flex flex-row space-x-3">
+                      <div class="content-end">
+                        <i
+                          class="fa-solid fa-chevron-right font-thin text-blue-950"
+                        ></i>
+                      </div>
+                      <div>
+                        <div class="flex flex-row space-x-2">
+                          <div class="font-medium">Birthday:</div>
+                          <div class="">25 May 1991</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-row space-x-3">
+                      <div class="content-end">
+                        <i
+                          class="fa-solid fa-chevron-right font-thin text-blue-950"
+                        ></i>
+                      </div>
+                      <div>
+                        <div class="flex flex-row space-x-2">
+                          <div class="font-medium">Degree:</div>
+                          <div class="">Bachelor's in CS</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-row space-x-3">
+                      <div class="content-end">
+                        <i
+                          class="fa-solid fa-chevron-right font-thin text-blue-950"
+                        ></i>
+                      </div>
+                      <div>
+                        <div class="flex flex-row space-x-2">
+                          <div class="font-medium">Availablity:</div>
+                          <div class="">Fulltime</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-row space-x-3">
+                      <div class="content-end">
+                        <i
+                          class="fa-solid fa-chevron-right font-thin text-blue-950"
+                        ></i>
+                      </div>
+                      <div>
+                        <div class="flex flex-row space-x-2">
+                          <div class="font-medium">Skype:</div>
+                          <div class="">hassan.shojaei</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              id="about-hibies"
+              class="section-title relative text-2xl pb-3 text-blue-950"
+            >
+              More:
+            </div>
+            <div
+              id="about-content"
+              class="flex flex-col text-lg space-y-2 pt-4"
+            >
+              <div>
+                <div class="font-medium text-blue-500">Languages:</div>
+                <div>
+                  Bussiness Level English, Fluent Persian, and Exploring
+                  Deutsch.
+                </div>
+              </div>
+              <div>
+                <div class="font-medium text-blue-500">Soft Skills:</div>
+                <div>
+                  Strong problem-solving, Multi-tasking, Lazyness, Easily
+                  adopting new technologies, Fast learning, MVP-oriented if
+                  necessary.
+                </div>
+              </div>
+              <div>
+                <div class="font-medium text-blue-500">Hobbies:</div>
+                <div>
+                  I am proud of my 10 years of continues 3 sessions of Futsal
+                  and Volleybal per week, I also fancy Pingpong.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline Container -->
+      <div
+        id="resume"
+        class="pl-0 min-h-screen relative mx-auto w-full overflow-hidden bg-slate-100"
+      >
+        <!-- Timeline -->
+        <div class="relative wrap overflow-hidden py-5 h-full px-5">
+          <!-- Line -->
+          <div
+            class="border-2-2 sm:absolute sm:border-opacity-20 border-opacity-0 border-gray-700 h-full border"
+            style="left: 50%"
+          ></div>
+
+          <!-- Right Side (Even) -->
+          <div class="experience-card-right">
+            <div class="order-1 w-[46%]"></div>
+
+            <div class="experience-number-container">
+              <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+            </div>
+            <div class="experience-card-inner">
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                Medical Leave, GymHub (Jul 2023 - Present)
+              </h3>
+              <p
+                class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+              >
+                I had Orthognathic Jaw Surgery and after that started GymHub as
+                Co-Founder and CTO targeting Gym goers to motivate them not to
+                quit the Gym and attend classes.
+              </p>
+              <ul class="pt-2 space-y-2">
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Designed and developed the RestfulAPI for the mobile app and
+                    wrote feature tests and unit tests.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Used GitHub Actions for the CI/CD and created the production
+                    environment.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>Used Docker and dockeriz</div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Automated the creation of the API docs using OpenAPI
+                    Specification(OAS).
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Left Side (Odd) -->
+          <div class="experience-card-left">
+            <div class="order-1 w-[46%]"></div>
+            <div class="experience-number-container">
+              <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
+            </div>
+            <div class="experience-card-inner">
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                Full Stack at Artbees, Growmatik (Sep 2020 – Jul 2023)
+              </h3>
+              <p
+                class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+              >
+                Growmatik is a marketing automation platform that helps
+                businesses grow their online presence and sales by personalizing
+                their website, sending emails, showing popups, and many other
+                marketing tools.
+              </p>
+              <ul class="pt-2 space-y-2">
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    In an agile environment, Mentored and Evaluated Developers,
+                    Reviewed Code, engaged in Sprint Planning, did Pair
+                    Programming, engaged in CI/CD, Practiced TDD, and
+                    contributed to Retrospectives, and User Support.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Built and maintained an email service(email campaigns) with
+                    AWS SES and SNS to send emails to 10+ million unique emails,
+                    achieving a bounce rate of <0.5% and a spam rate of <0.03%
+                    with millions of emails sent.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Designed and implemented Growmatik’s core services,
+                    Workflow, Automation, and Simple Rule Engine, handling
+                    real-time execution of thousands of Automation and
+                    Workflow’s complex big queries, and increasing customer
+                    targeting and stickiness by 30%.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Accelerated the JS script engine for running front-end
+                    actions and triggers(popup, page personalization,..) by
+                    refactoring it to decrease size and increase speed.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Boosted Growmatik customer targeting with Shopify
+                    integration, increasing our customers by 35% in 2 months.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Doubled customers by integrating Growmatik with services
+                    like AWS, WP, Stripe, HubSpot, SparkPost, DKIM and SPF
+                    authorizations, GSC, GDS, FB, and more, expanding the
+                    platform’s functionality and compatibility.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Estimated and Delivered tasks by deadlines, filled reports,
+                    and attended everyday stand-up meetings.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Side (Even) -->
+          <div class="experience-card-right">
+            <div class="order-1 w-[46%]"></div>
+
+            <div class="experience-number-container">
+              <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
+            </div>
+            <div class="experience-card-inner">
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                Co-Founder, CTO at Googsell, Emenu (Jun 2017 – Jan 2020)
+              </h3>
+              <p
+                class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+              >
+                Googsell and Emenu were online platforms that aimed to create
+                online stores for Instagram shops and QR code menus for
+                restaurants and coffee shops by integrating with Instagram API
+                (Both were shut down after Instagram filtering in Iran).
+              </p>
+              <ul class="pt-2 space-y-2">
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Ranked top 5 for the best online store out of 4000
+                    participants in the Iran Web and Mobile Festival in 2017.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Managed the team to establish the main Instagram API
+                    integration for Googsell.com and Emenu.io, integrating the
+                    pages and converting them to websites with only 5 clicks.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Grew Googsell to over 500 Instagram shops in the first
+                    years.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Led, Designed Solutions, Reviewed Codes, and Debugged code
+                    using various tools and technologies.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Left Side (Odd) -->
+          <div class="experience-card-left">
+            <div class="order-1 w-[46%]"></div>
+            <div class="experience-number-container">
+              <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
+            </div>
+            <div class="experience-card-inner">
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                Full Stack/Senior Developer at 2nabsh.com (Jun 2015– Dec 2017)
+              </h3>
+              <p
+                class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+              >
+                2nabsh is one of the biggest realtor SaaS apps in Iran, that
+                provides online platforms for real estate agents and buyers.
+              </p>
+              <ul class="pt-2 space-y-2">
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Planned and collaborated in project migration from pure PHP
+                    to Laravel 5.5, and automated the database conversion,
+                    saving 50% time.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Created a web crawler that identified and integrated new
+                    properties from our contractors, resulting in a decrease in
+                    realtor bounce rate, also increasing Google click rate by
+                    15%.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Built part of the OAuth 2 with Laravel Passport on Restful
+                    API and integrated realtors’ websites.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Side (Even) -->
+          <div class="experience-card-right">
+            <div class="order-1 w-[46%]"></div>
+
+            <div class="experience-number-container">
+              <h1 class="mx-auto font-semibold text-lg text-white">5</h1>
+            </div>
+            <div class="experience-card-inner">
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                Software Engineer at Dayamooz.com Company (2014-2015)
+              </h3>
+              <p
+                class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+              >
+                Daya is the biggest educational social media and gamification
+                learning app in Iran, that helps students learn and interact
+                with each other online.
+              </p>
+              <ul class="pt-2 space-y-2">
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    As a back-end developer, worked part-time at Daya company on
+                    their microservices for the mobile app.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    I also learned Java Spring, and Hibernate to work needed for
+                    a RestAPI part of the project.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Left Side (Odd) -->
+          <div class="experience-card-left">
+            <div class="order-1 w-[46%]"></div>
+            <div class="experience-number-container">
+              <h1 class="mx-auto text-white font-semibold text-lg">6</h1>
+            </div>
+            <div class="experience-card-inner">
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                Co-Founder, BackEnd Developer at Espida.net (2013-2014)
+              </h3>
+              <p
+                class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+              >
+                Espida.net was a company that provided software and network
+                services to various customers. I developed a Custom CMS in PHP
+                to develop and maintain our projects.
+              </p>
+              <ul class="pt-2 space-y-2">
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    We provided software to various companies, such as staff
+                    attendance for a military base, a tourism website for a
+                    municipality organization, CRM for a hardware recovery
+                    store, and a support tracking system for a computer
+                    accessory shop.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Side (Even) -->
+          <div class="experience-card-right">
+            <div class="order-1 w-[46%]"></div>
+
+            <div class="experience-number-container">
+              <h1 class="mx-auto font-semibold text-lg text-white">7</h1>
+            </div>
+            <div class="experience-card-inner">
+              <h3 class="mb-3 font-bold text-gray-800 text-xl">
+                FullStack Developer at Freelancer
+              </h3>
+              <p
+                class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
+              >
+                A short list of freelancing work that I have done during my
+                whole career, I have mostly used Jenkins and Github Actions for
+                CI/CD, Sometimes dockerized projects, and always asked and
+                suggested writing tests.
+              </p>
+              <ul class="pt-2 space-y-2">
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Serverless Payment and Staff Management APP with React
+                    Native and Firebase.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    API for a Car Parking Finder project by React Native and the
+                    Lara GPS Device using Java Spring and Hibernate.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Assembled a fully-fledged Cryptocurrency Trading website.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Refactored and expanded a Telegram Bot API marketplace with
+                    tens of menus and actions, increasing the user base of the
+                    bot to over 200K and handling millions of user requests per
+                    month with a simple VPS.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Free and open-source Chrome extension that shows new Persian
+                    poems via push notification.
+                  </div>
+                </li>
+                <li class="flex flex-row text-sm space-x-2">
+                  <div>
+                    <i class="fa-solid fa-check text-sky-700"></i>
+                  </div>
+                  <div>
+                    Some others: Established a Lottery website and support of
+                    municipality tourism website.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Container -->
+      <div
+        id="skills"
+        class="p-4 min-h-screen relative mx-auto w-full overflow-hidden bg-gradient-to-r from-blue-500 to-teal-500 text-white"
+      >
+        <div
+          class="container mx-auto rounded-lg shadow-lg bg-white p-6 md:p-12 text-gray-800 pt-8 mt-8"
+        >
+          <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">
+            My Skills
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Category -->
+            <div class="space-y-4">
+              <!-- Skill Group -->
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Languages</h3>
+                <div class="flex flex-wrap gap-2">
+                  <!-- Skill Chip -->
+                  <span class="skill-text">PHP</span>
+                  <span class="skill-text">JavaScript (JS)</span>
+                  <span class="skill-text">TypeScript (TS)</span>
+                  <span class="skill-text">React.js</span>
+                  <span class="skill-text">Angular.js</span>
+                  <span class="skill-text">Vue.js</span>
+                  <span class="skill-text">HTML5</span>
+                  <span class="skill-text">CSS3</span>
+                </div>
+              </div>
+              <div class="space-y-4 pt-8">
+                <h3 class="text-xl font-semibold mb-2">Frameworks</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="skill-text">Laravel</span>
+                  <span class="skill-text">CodeIgniter</span>
+                  <span class="skill-text">Symphone (Aspiring)</span>
+                </div>
+              </div>
+              <div class="space-y-4 pt-8">
+                <h3 class="text-xl font-semibold mb-2">Databases</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="skill-text">MySQL</span>
+                  <span class="skill-text">PostgreSQL</span>
+                  <span class="skill-text">Redis</span>
+                  <span class="skill-text">RDS</span>
+                  <span class="skill-text">Firebase</span>
+                  <span class="skill-text">CloudServices</span>
+                </div>
+              </div>
+              <div class="space-y-4 pt-8">
+                <h3 class="text-xl font-semibold mb-2">Tools</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="skill-text">AWS</span>
+                  <span class="skill-text">Docker</span>
+                  <span class="skill-text">Jenkins</span>
+                  <span class="skill-text">CI/CD</span>
+                  <span class="skill-text">Git</span>
+                  <span class="skill-text">PHPUnit</span>
+                  <span class="skill-text">Jira</span>
+                  <span class="skill-text">XDebug</span>
+                  <span class="skill-text">Kubernetes CLI</span>
+                  <span class="skill-text">Linux</span>
+                </div>
+              </div>
+              <div class="space-y-4 pt-8">
+                <h3 class="text-xl font-semibold mb-2">Practices</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="skill-text">Agile</span>
+                  <span class="skill-text">SOLID</span>
+                  <span class="skill-text">Design Patterns</span>
+                  <span class="skill-text">RESTful API</span>
+                  <span class="skill-text">GraphQL</span>
+                  <span class="skill-text">MVC</span>
+                  <span class="skill-text">OOP</span>
+                  <span class="skill-text">TDD</span>
+                  <span class="skill-text">CI/CD</span>
+                  <span class="skill-text">Integrations</span>
+                </div>
+              </div>
+              <div class="space-y-4 pt-8">
+                <h3 class="text-xl font-semibold mb-2">Exploring</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="skill-text">Java</span>
+                  <span class="skill-text">Python</span>
+                  <span class="skill-text">Nod.js</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Me Section -->
+      <div id="contact" class="bg-white p-16 md:p-20">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">
+            Contact Me
+          </h2>
+          <div class="flex flex-wrap justify-center gap-8">
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/roham0010"
+              class="text-blue-600 hover:text-blue-800"
+            >
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <!-- GitLab -->
+            <a
+              href="https://gitlab.com/Roham0010"
+              class="text-orange-600 hover:text-orange-800"
+            >
+              <i class="fab fa-gitlab fa-2x"></i>
+            </a>
+            <!-- GitHub -->
+            <a
+              href="https://github.com/Roham0010"
+              class="text-gray-600 hover:text-gray-800"
+            >
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+            <!-- Stack Overflow -->
+            <a
+              href="https://stackoverflow.com/users/6220658/roham-shojaei"
+              class="text-yellow-600 hover:text-yellow-800"
+            >
+              <i class="fab fa-stack-overflow fa-2x"></i>
+            </a>
+          </div>
+          <div class="text-center mt-8 space-y-2">
+            <p class="text-gray-700">
+              <i class="fas fa-map-marker-alt"></i> Mashhad, Razavi Khorasan,
+              Iran
+            </p>
+            <p class="text-gray-700">
+              <i class="fas fa-phone"></i> +989388391302
+            </p>
+            <p class="text-gray-700">
+              <i class="fas fa-envelope"></i> rohamwork1@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-gray-200 text-center p-4 text-sm text-gray-600">
+      <p>© 2024 Roham Shojaei. All rights reserved.</p>
+      <p>
+        Content on this site is licensed under a Creative Commons Attribution
+        4.0 International license.
+      </p>
+    </footer>
+  </body>
+  <script src="./assets/js/script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/9f0b66f9cb.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

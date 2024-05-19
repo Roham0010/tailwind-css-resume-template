@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mountains {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  /* background: #ade29b; */
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+}
+
+.portrait1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  top: 0px;
+  left: 0px;
+}
+
+.portrait-img {
+  z-index: 3;
+}
+
+.mountains::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, #f0f0f0, transparent);
+  z-index: 40;
+  padding-left: 128px;
+}
+
+.mountain {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  min-width: 200px;
+  border-width: min(200px, 100px);
+}
+
+.mountain1 {
+  border-width: 0 50vw 25vh 50vw;
+  border-color: transparent transparent #b3b3b3 transparent;
+  left: 65%;
+  transform: translateX(-50%);
+}
+
+.mountain2 {
+  border-width: 0 50vw 30vh 50vw;
+  border-color: transparent transparent #999 transparent;
+  left: 80%;
+  transform: translateX(-50%);
+}
+
+.mountain3 {
+  border-width: 0 50vw 35vh 50vw;
+  border-color: transparent transparent #999 transparent;
+  left: 14%;
+  transform: translateX(-50%);
+  /* z-index: 0; */
+}
+.sun {
+  position: absolute;
+  /* top: -6%; */
+  left: 45%;
+  bottom: 11%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: #b3b3b3;
+  z-index: 1;
+}
+.grid-container {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  grid-gap: 100px;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+}
+.random-char {
+  /* position: absolute; */
+  font-size: 12px;
+  transform-origin: center;
+  z-index: 0;
+}
+.hero-text {
+  background-color: #f0f0f0;
+}
+@keyframes waveAnimation {
+  0%,
+  3% {
+    transform: rotate(0deg);
+  }
+  6% {
+    transform: rotate(14deg);
+  }
+  9% {
+    transform: rotate(-8deg);
+  }
+  12% {
+    transform: rotate(14deg);
+  }
+  15% {
+    transform: rotate(-4deg);
+  }
+  18% {
+    transform: rotate(10deg);
+  }
+  20%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.hand-wave {
+  display: inline-block;
+  animation: waveAnimation 8s ease-in-out infinite;
+}
+.section-title:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 23px;
+  height: 4px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+.skill-text {
+  @apply bg-blue-200 text-blue-800 text-sm font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800;
+}
+.experience-card-right {
+  @apply mb-8 flex sm:flex-row flex-col justify-between items-center w-full;
+}
+.experience-card-left {
+  @apply mb-8 flex flex-col justify-between sm:flex-row-reverse items-center w-full;
+}
+.experience-card-inner {
+  @apply order-1 bg-cyan-200 rounded-lg shadow-xl sm:w-[46%] w-full px-6 py-4;
+}
+
+.experience-number-container {
+  @apply z-20 flex items-center order-1 bg-yellow-500 shadow-xl w-8 h-8 rounded-full;
+}
