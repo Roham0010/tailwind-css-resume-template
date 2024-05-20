@@ -9,9 +9,6 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <div class="grid-container" id="grid-container">
-      <!-- Random characters will be placed here -->
-    </div>
     <div
       class="fixed sm:hidden top-2 right-3 z-[111] rounded-full bg-gray-400 px-3 py-2"
       onclick="toggleMenu()"
@@ -51,6 +48,8 @@
               <i class="fas fa-phone-square"></i>
               <a href="#contact" class="hover:text-gray-300">Contact</a>
             </div>
+
+            <!-- // TODO: Add doenload my PDF resume! -->
           </div>
         </div>
       </nav>
@@ -60,7 +59,7 @@
       <!-- Home block -->
       <div
         id="home"
-        class="pl-0 h-screen relative mx-auto w-full overflow-hidden"
+        class="pl-0 h-screen sticky top-0 mx-auto w-full overflow-hidden z-[-1]"
       >
         <div
           class="flex flex-col z-50 sm:w-1/2 w-full absolute sm:justify-center content-center sm:h-1/2 h-1/6 space-y-2 min-[300px]:h-[95%] min-[300px]:justify-end"
@@ -111,8 +110,97 @@
           style="left: 50%; transform: translateX(-50%)"
         />
       </div>
+      <!-- About Section -->
+      <section
+        id="about"
+        class="min-h-screen bg-white top-0 flex items-center justify-center w-full z-10"
+      >
+        <div
+          class="container mx-auto bg-white rounded-lg shadow-lg p-6 md:p-12"
+        >
+          <h2 class="text-4xl font-bold text-center text-blue-950 mb-8">
+            About Me
+          </h2>
+          <div
+            class="md:flex md:items-center md:justify-center space-y-6 md:space-y-0 md:space-x-10"
+          >
+            <div class="md:w-1/3">
+              <img
+                src="./assets/img/roham4.png"
+                alt="Roham Shojaei"
+                class="rounded-full shadow-xl transition-transform transform hover:scale-105"
+              />
+            </div>
+            <div class="md:w-2/3 space-y-4">
+              <p class="text-lg">
+                Welcome to my website. I am a Full Stack Developer with 10 years
+                of experience in web development, specializing in PHP, Laravel,
+                JavaScript, TypeScript, Docker, CI/CD tools, and cloud
+                technologies like AWS.
+              </p>
+              <p class="text-lg">
+                I have co-founded projects and led development teams, mentored
+                and evaluated junior developers, and continuously expanded my
+                technical skills. I am open to remote opportunities and willing
+                to relocate for the right position.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p>
+                    <strong>E-Mail:</strong>
+                    <a
+                      href="mailto:rohamwork1@gmail.com"
+                      class="text-blue-950 hover:underline"
+                      >rohamwork1@gmail.com</a
+                    >
+                  </p>
+                  <p>
+                    <strong>Phone:</strong>
+                    <a
+                      href="tel:+989388391302"
+                      class="text-blue-950 hover:underline"
+                      >(+98) 938 839 1302</a
+                    >
+                  </p>
+                  <p><strong>Address:</strong> Mashhad, Iran</p>
+                  <p>
+                    <strong>LinkedIn:</strong>
+                    <a
+                      href="https://www.linkedin.com/in/roham0010"
+                      class="text-blue-950 hover:underline"
+                      >Roham0010</a
+                    >
+                  </p>
+                </div>
+                <div>
+                  <p><strong>Age:</strong> 32</p>
+                  <p><strong>Birthday:</strong> 25 May 1991</p>
+                  <p><strong>Degree:</strong> Bachelor's in CS</p>
+                  <p><strong>Availability:</strong> Fulltime</p>
+                  <p><strong>Skype:</strong> hassan.shojaei</p>
+                </div>
+              </div>
+              <div class="text-lg">
+                <p>
+                  <strong>Languages:</strong> Business Level English, Fluent
+                  Persian, and Exploring Deutsch.
+                </p>
+                <p>
+                  <strong>Soft Skills:</strong> Strong problem-solving,
+                  Multi-tasking, Laziness, Easily adopting new technologies,
+                  Fast learning, MVP-oriented if necessary.
+                </p>
+                <p>
+                  <strong>Hobbies:</strong> Futsal, Volleyball, Pingpong
+                  enthusiast with a decade of dedication.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <!-- About section -->
+      <!-- About section
       <div
         id="about"
         class="pl-0 min-h-screen relative mx-auto w-full overflow-hidden"
@@ -333,7 +421,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Timeline Container -->
       <div
